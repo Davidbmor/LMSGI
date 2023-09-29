@@ -1,0 +1,17 @@
+<mensaje>
+    <remitente>
+        <nombre>Pedro</nombre>
+        <email>elpedrito@gmail.com</email>
+    </remitente>
+    <destinatario>
+        <nombre>Juan</nombre>
+        <email>juanito@gmail.com</email>
+    </destinatario>
+    <asunto>Deberes </asunto>
+    <texto>
+        <parrafo>Pasame los deberes </parrafo> 
+    </texto>
+
+
+</mensaje>
+    
