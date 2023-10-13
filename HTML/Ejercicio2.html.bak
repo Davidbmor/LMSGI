@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ejercicio2</title>
+  </head>
+  <body>
+    <p>
+      <div style="background-color:red; width:220px ;height :50px"> <span style="color: red;">.
+        </span></div>
+      <div style="background-color:yellow;  width:220px ;height :50px"> <span style="color: white;">.
+        </span></div>
+      <div style="background-color:red ; width:220px;height :50px "> <span style="color: red;">.
+        </span></div>
+    </p>
+    <p>
+      <div style="background-color:green; width:220px;height :50px "> <span style="color: green;">.
+        </span></div>
+      <div style="background-color:white; width:220px ;height :50px "> <span style="color: white;">.
+        </span></div>
+      <div style="background-color:green; width:220px ;height :50px"> <span style="color: green;">.
+        </span></div>
+    </p>
+    <p>
+      <div style="background-color:black; width:220px ;height :50px "> <span style="color: black;">.
+        </span></div>
+      <div style="background-color:red; width:220px ;height :50px "> <span style="color: red;">.
+        </span></div>
+      <div style="background-color:yellow; width:220px;height :50px "> <span style="color: yellow;">.
+        </span></div>
+    </p>
+  </body>
+</html>
