@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>index</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1> Programación </h1>
+      </header>
+      <p> La programación es la actividad que se enfoca en organizar un conjunto
+        de datos ordenados a seguir para ser ciertas cosas, esta definición
+        puede utilizarse en muchos contextos. </p>
+      <div>
+        <header>
+          <h1> Temas </h1>
+        </header>
+        <p> Desde aqui podras acceder al <a href="temas.html">temario del tema
+          </a></p>
+      </div>
+      <div>
+        <header>
+          <h1> Relacion de ejercicios </h1>
+        </header>
+        <p> Accede desde aqui a las Relaciones de ejerci </p>
+      </div>
+    </div>
+  </body>
+</html>
