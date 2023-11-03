@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html><html>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>f</title>
   </head>
   <body>
     <div style="border: 2px solid red; position: absolute; top: 10px; left: 8px; width: 1177px;">
       <h1> Periodico </h1>
     </div>
-    <div style="border: 2px solid red; position: absolute; top: 103px; left: 348px; width: 837px; height: 1237px;">
+    <div style="border: 2px solid red; position: absolute; top: 103px; left: 348px; width: 837px; height: 1129px;">
       <figure>
         <h2>Un español, entre los más de 300 extranjeros y heridos que han
           salido de Gaza a Egipto por el paso de Rafah </h2>
         <p> <b>Hamás ha publicado en su página de Facebook un listado de unas
             500 personas a las que se autoriza salir de la Franja </b></p>
-        &nbsp;&nbsp;&nbsp; <img src="../ejercicio%2011/abuelaa.jpg" alt="" style="width: 379px; height: 213px;">
-        <figcaption> &nbsp;&nbsp;&nbsp; Paso de Rahfa</figcaption>
+            <img src="file:///C:/Users/David/Documents/LMSGI/LMSGI/HTML/Nueva%20carpeta/abuelaa.jpg"
+
+          alt="" style="width: 379px; height: 213px;" /> <figcaption>     Paso
+          de Rahfa</figcaption>
         <p> El Ministerio de Asuntos Exteriores, Unión Europea y Cooperación de
           España ha confirmado que un ciudadano español ha logrado abandonar la
           Franja de Gaza a través del paso fronterizo de Rafah, que conecta el
@@ -32,27 +34,14 @@
           declaraciones en el Mando de Operaciones situado en la base de
           Retamares (Madrid) tras celebrar una videoconferencia con el general
           Aroldo Lázaro, que lidera las tropas de la ONU en Líbano. </p>
-        <h2>Jesús Pérez, un trabajador de la ONU, el segundo español en ser
-          evacuado de la Franja de Gaza</h2>
+        <h2>Llega a España 'Ciarán', la peor borrasca de la temporada: estas son
+          las zonas afectadas </h2>
         <p> <b>Hamás ha publicado en su página de Facebook un listado de unas
             500 personas a las que se autoriza salir de la Franja </b></p>
-        <img src="../ejercicio%2011/jesusperez.jpg" alt="" style="top: 795px; left: 91px; width: 437px; height: 245px;">
-        <figcaption> Varios palestinos abandonando la Franja de Gaza por el paso
-          de Rafah este jueves.</figcaption>
-        <p> Un español que trabaja en la Oficina de Naciones Unidas para la Paz
-          en Oriente Medio (UNSCO) ha salido este jueves de Gaza y se encuentra
-          ya en Egipto, según han confirmado fuentes diplomáticas a la agencia
-          Efe. Se trata de Jesús Pérez Arellano -según han asegurado las
-          organizaciones que trabajan en la zona-, un empleado de la Oficina del
-          Coordinador Especial de UNSCO que se ha convertido en el segundo
-          español que ha salido de la zona de guerra por el paso fronterizo de
-          Rafah, después de que el miércoles saliera Raúl Incertis, un
-          anestesista que trabajaba para Médicos Sin Fronteras (MSF). Con la
-          salida de Pérez Arellano, el Ministerio de Exteriores español "da por
-          cerrada" la evacuación de los empleados españoles de ONG y organismos
-          internacionales en Gaza, han señalado las fuentes consultadas por Efe.
-        </p>
-      </figure>
+        <img src="file:///C:/Users/David/Documents/LMSGI/LMSGI/HTML/Nueva%20carpeta/abuelaa.jpg"
+
+          alt="" style="width: 379px; height: 213px;" /> <figcaption> Paso de
+          Rahfa</figcaption></figure>
     </div>
     <div style="border: 2px solid red; position: absolute; top: 103px; left: 8px; width: 325px; height: 1075px;">
       <figure>
@@ -78,6 +67,5 @@
           medio millón de personas a diario».</p>
       </figure>
     </div>
-    
   </body>
 </html>
