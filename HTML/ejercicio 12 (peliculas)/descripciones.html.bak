@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <title>descripciones</title>
+  </head>
+  <body>
+    <div id=" Trolls" style=" position:absolute; top:2000px;">
+      <h2> TROLLS </h2>
+      <img src="TROLOLL.jpg" alt="" style="width: 238px; height: 375px;" />
+      <p> Trolls 3: Band Together” trae una nueva y emocionante dinámica a la
+        historia de amor entre Poppy y Branch. La trama se complica cuando Poppy
+        descubre que Branch solía ser parte de una famosa boyband llamada
+        BroZone, junto a sus cuatro hermanos. Cuando uno de sus hermanos es
+        secuestrado por villanos de la música pop, Velvet y Veneer, Poppy y
+        Branch se embarcan en una conmovedora aventura para reunir a la banda y
+        rescatar a su hermano. La sinopsis oficial de la película dice: “Poppy
+        descubre que Branch formó parte de la banda de chicos ‘BroZone’ con sus
+        hermanos Floyd, John Dory, Spruce y Clay. Cuando secuestran a Floyd,
+        Branch y Poppy se embarcan en un viaje para reunir a sus otros dos
+        hermanos y rescatar a Floyd”. Esta película promete risas, lágrimas y
+        canciones pegajosas en un viaje lleno de emociones y música que
+        mantendrá a los espectadores entretenidos de principio a fin. </p>
+    </div>
+    <div id="El chico y la garza" style=" position:absolute; top:1000px; ">
+      <h2> El chico y la Garza </h2>
+      <img src="Er%20shico%20y%20la%20garza.jfif" alt="" />
+      <p> La película muestra el crecimiento psicológico de un soplanucas  a
+        través de interacciones con sus amigos y su tío. Está basada en el libro
+        de 1937 del mismo nombre escrito por Genzaburo Yoshino. (FILMAFFINITY)</p>
+    </div>
+    <div id="Five" style=" position:absolute; top:4000px;">
+      <h2> Five Nights at Freddy's </h2>
+      <img src="fai%20nai%20ar%20fredy.jpg" alt="" style="top: 70px; left: 0px; width: 353px; height: 555px;" />
+      <p> Un hombre comienza un trabajo como guardia de seguridad nocturno en el
+        restaurante Freddy Fazbear's Pizza, donde descubre que los animatrónicos
+        se mueven por la noche y matan a cualquiera que vean. Adaptación de la
+        exitosa saga de videojuegos homónima creada en 2014 por Scott Cawthon. </p>
+    </div>
+    <div id="PawPatrol" style=" position:absolute; top:6000px;">
+      <h2> Paw Patrol </h2>
+      <img src="PawPatrol.jfif" alt="" style="width: 326px; height: 489px; top: 70px; left: 0px;" />
+      <p>La Patrulla Perruna se enfrenta a un gran desafío: evitar que el nuevo
+        alcalde de la ciudad, Humdinger, cause demasiados problemas. Equipados
+        con la mejor tecnología, los cachorros luchan juntos para salvar a los
+        habitantes de Ciudad Aventura. </p>
+    </div>
+    
+  </body>
+</html>
