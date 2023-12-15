@@ -1,0 +1,13 @@
+#uno,#tres,#cinco,#siete,#ocho{
+    
+    border: 1px solid black;
+    color: blue;
+    background-color: gray;
+    font-size: 100%;
+}
+#dos,#cuatro,#sais{
+    border: 1px solid black;
+    color: blue;
+    background-color: yellow;
+    font-size: 100%;
+}
