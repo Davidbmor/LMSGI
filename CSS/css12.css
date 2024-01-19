@@ -1,0 +1,11 @@
+#izq{
+    background-color: aqua;
+    width: 20%;
+    float: left;
+}
+#der{
+    background-color: aliceblue;
+    width: 80%;
+    float: right;
+    overflow: scroll;
+}
