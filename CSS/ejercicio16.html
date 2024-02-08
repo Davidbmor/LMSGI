@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="csss16.css">
+
+        <head>
+            <title>formularios</title>
+        </head>
+
+        <header id="cabecera">
+            <div id="aizq"> <h1> Pizzeria pizza</h1>
+                <p>PARA REALIZAR SU PEDIDIO RELLENA ESTE FORMULARIO </p> </div>
+
+            <div id="ader">
+
+                <label for="Usuario">Usuario </label> <input
+                    name="Usuario"
+                    id="Usuario" type="text" /><br />
+                <br />
+                <label for="Contraseña">Contraseña </label> <input
+                    name="Contraseña"
+                    id="Contraseña" type="password" /><br />
+                <br />
+            </div>
+        </header>
+
+        <body id="cuerpo">
+            <div id="izquierda"> <label for="nombre"> </label>
+                <fieldset name="Datos perosnales">
+                    <legend>Datos personales </legend>
+                    <label for="nombre">Nombre </label> <input name="Nombre"
+                        id="nombre" type="text" /><br />
+                    <br />
+                    <label for="Apellido">Apellido </label> <input name="Nombre"
+                        id="Apellido" type="text" /><br />
+                    <br />
+                    <label for="Telefono">Teléfono </label> <input id="Telefono"
+                        name="Teléfono" type="tel" /><br />
+                    <br />
+                    <label form="Domicilio" for="domicilio"> Domicilio
+                    </label><input name="Domicilio " id="domicilio"
+                        type="text" /><br />
+                    <br />
+                    <label form="Localidad">Localidad<input id="Localidad"
+                            name="Localidad" type="text" />
+                    </label> <br />
+                    <br />
+                    <label form="Cp">Código postal<input id="Cp"
+                            name="Localidad"
+                            type="text" />
+                    </label>
+                </fieldset>
+                <br>    
+                    <legend>Opción de entrega </legend> <input name="entrega"
+                        id="Dm" type="radio" /><label form="domicilio"
+                        for="Dm">Domicilio<br />
+                        <input name="entrega" id="email" type="radio" /></label>
+                    <label form="Email" for="email">Email</label><br />
+                    <br />
+                <br>    
+                <label
+                        form="oferta">Si,
+                        por email</label><br />
+                    <input name="oferta" id="oferta" type="checkbox" /><label
+                        form="oferta">Si,
+                        a domicilio<br />
+                    </label><input name="oferta" id="oferta"
+                        type="checkbox" /><label form="oferta">No</label><br />
+                    <br />
+                    <legend>¿Quiere que le enviemos ofertas? </legend>
+                </fieldset>
+            </div>
+
+        </body>
+
+
+
+
+        <fieldset> <legend> Elige su menu</legend>
+            <label for="comida"> Elige el tamaño de la pizza </label>
+            <select id="comida" name="comida">
+                <option value=" Grande"> Grande</option>
+                <option value=" Mediana"> Mediana</option>
+                <option value=" Pequeña"> Pequeña</option>
+                <option value=" Muy pequeña"> Muy pequeña</option>
+
+            </select>
+
+            <br>
+
+            <label for="Sabor"> Elige el sabor </label>
+            <select id="Sabor" name="Sabor">
+                <option value=" Barbacoa"> Barbacoa</option>
+                <option value=" Carbonara"> Carbonara</option>
+                <option value=" +
+                    Rustica"> Rustica</option>
+                <opt01110i212o142n value=" Pollua"> Pollua</option>
+            </select>
+            <br>
+
+            <legend> Ingrediaentes adiccionales </legend>
+            <textarea name="Ingrediaentes" id="Ingrediaentes" cols="30"
+                rows="10"></textarea>
+            <br>
+        </fieldset>
+
+        <footer id="pie"> <input type="submit" value="Pedir">
+        </footer></html>

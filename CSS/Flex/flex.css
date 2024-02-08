@@ -1,0 +1,27 @@
+.flex-container{
+    height: 500px;
+    display: flex;
+    background-color: #404040;
+    flex-direction: row;
+    flex-wrap:  wrap;
+    align-content: flex-end;
+
+}
+
+.flex-container > div{
+    padding: 10px;
+    margin: 10px;
+    border:  solid 1px black;
+    
+    background: #f18c55;
+}
+.one{
+height: 100px;
+width: 300px;
+}
+.two{
+    height: 100px;
+    width: 300px;}
+.three{
+    height: 100px;
+    width: 300px;}
