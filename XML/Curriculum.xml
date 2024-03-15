@@ -1,4 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Curriculum id="876" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Curriculum.xsd">
+<Curriculum id="876" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <DatosPersonales>
+        <Nombre>David</Nombre>
+        <Apellidos>Barrera Morales </Apellidos>
+        <FechaNacimiento>19/01/2005</FechaNacimiento>
+        <LugarNacimiento>Granada, España </LugarNacimiento>
+        <Nacionalidades>
+            <Nacionalidad>Española </Nacionalidad>
+        </Nacionalidades>
+        <DNI>77777777H</DNI>
+        <ArchivoFoto></ArchivoFoto>
+    </DatosPersonales>
+    <DatosContacto>
+        <TipoVia></TipoVia>
+        <NombreVia></NombreVia>
+        <Numero></Numero>
+        <Portal></Portal>
+        <Escalera></Escalera>
+        <Piso></Piso>
+        <Puerta></Puerta>
+        <CodigoPostal></CodigoPostal>
+        <Pais></Pais>
+        <CorreoElectronico></CorreoElectronico>
+        <TelefonoMovil></TelefonoMovil>
+        <TelefonoFijo></TelefonoFijo>
+    </DatosContacto>
+    <DatosContactoAdicionales>
+        <PaginaWeb></PaginaWeb>
+        <RedesSociales></RedesSociales>
+    </DatosContactoAdicionales>
+    <FormacionAcademica>
+        <Estudio>
+            <Nombre></Nombre>
+            <Institucion></Institucion>
+            <FechaInicio></FechaInicio>
+            <FechaFin>M</FechaFin>
+        </Estudio>
+    </FormacionAcademica>
+    <Idioma>
+        <Nombre></Nombre>
+        <ExpresionOral></ExpresionOral>
+        <ComprensionOral></ComprensionOral>
+        <ExpresionEscrita></ExpresionEscrita>
+        <ComprensionEscrita></ComprensionEscrita>
+        <TituloAcreditativo></TituloAcreditativo>
+        <NivelTitulo></NivelTitulo>
+    </Idioma>
+
+    
 
 </Curriculum>
