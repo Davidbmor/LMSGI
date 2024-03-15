@@ -29,8 +29,7 @@ body {
   grid-template:
   'header header header' 100px
   'navbar main sidebar' auto
-  'footer footer footer' 100px/
-  200px auto 200px;
+  'footer footer footer' 100px;
  }
 .header {
   grid-area: header;
@@ -64,9 +63,18 @@ body {
     grid-template:
     'header header header' 100px
     'navbar main sidebar' auto
-    'footer footer footer' 100px/
-    200px auto 200px;
+    'footer footer footer' 100px;
+   }
+}
 
-  }
 
+@media(min-width:600px){
+  .grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template:
+    'header header header' 100px
+    'navbar main sidebar' auto
+    'footer footer footer' 100px;
+   }
 }

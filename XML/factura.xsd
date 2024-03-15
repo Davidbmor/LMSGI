@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura" type="T_factura">
+
+    </xs:element>
+    <xs:complexType name="T_factura">
+        <xs:sequence>
+            <xs:element name="emision" type="xs:string" />
+            <xs:element name="vendedor" type="T_vendedor" />
+            <xs:element name="cliente" type="T_cliente" />
+            <xs:element name="articulo" type="T_articulo" maxOccurs="unbounded"/>
+            <xs:element name="descuento" type="T_descuento" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="T_vendedor">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" />
+    </xs:complexType>
+
+    <xs:complexType name="T_cliente">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" />
+            <xs:element name="direccion" type="T_direccion" />
+            <xs:element name="telefono" type="T_telefono" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" />
+    </xs:complexType>
+    <xs:complexType name="T_direccion">
+        <xs:sequence>
+            <xs:element name="via" type="xs:string" />
+            <xs:element name="cp" type="xs:string" />
+            <xs:element name="localidad" type="xs:string" />
+            <xs:element name="provincia" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="T_articulo">
+        <xs:sequence>
+            <xs:element name="denominacion" type="xs:string" />
+                <xs:element name="precio" type="xs:string" />
+            <xs:element name="cantidad" type="xs:integer" />
+     
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" />
+        <xs:attribute name="iva" type="xs:integer" />
+
+    </xs:complexType>
+
+    <xs:complexType name="T_telefono" >
+        <xs:attribute name="num" type="xs:integer" />
+
+
+    </xs:complexType>
+    <xs:simpleType name="T_descuento">
+        <xs:restriction base="xs:integer">
+            <xs:minExclusive value="0"></xs:minExclusive>
+            <xs:maxExclusive value="100"></xs:maxExclusive>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
