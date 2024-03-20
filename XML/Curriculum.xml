@@ -10,43 +10,71 @@
             <Nacionalidad>Española </Nacionalidad>
         </Nacionalidades>
         <DNI>77777777H</DNI>
-        <ArchivoFoto></ArchivoFoto>
+        <ArchivoFoto>imagen.jpg</ArchivoFoto>
     </DatosPersonales>
+
     <DatosContacto>
-        <TipoVia></TipoVia>
-        <NombreVia></NombreVia>
-        <Numero></Numero>
-        <Portal></Portal>
-        <Escalera></Escalera>
-        <Piso></Piso>
-        <Puerta></Puerta>
-        <CodigoPostal></CodigoPostal>
-        <Pais></Pais>
-        <CorreoElectronico></CorreoElectronico>
-        <TelefonoMovil></TelefonoMovil>
+        <TipoVia>Calle</TipoVia>
+        <NombreVia>Angel </NombreVia>
+        <Numero>32</Numero>
+        <Portal>F</Portal>
+        <Escalera>2</Escalera>
+        <Piso>3</Piso>
+        <Puerta>C</Puerta>
+        <CodigoPostal>18000</CodigoPostal>
+        <Pais>España</Pais>
+        <CorreoElectronico>davidbmor1901@gmail.com</CorreoElectronico>
+        <TelefonoMovil>648411839</TelefonoMovil>
         <TelefonoFijo></TelefonoFijo>
     </DatosContacto>
+
     <DatosContactoAdicionales>
-        <PaginaWeb></PaginaWeb>
+        <PaginaWeb>davidbmor.github.io</PaginaWeb>
         <RedesSociales></RedesSociales>
     </DatosContactoAdicionales>
+
     <FormacionAcademica>
         <Estudio>
-            <Nombre></Nombre>
-            <Institucion></Institucion>
-            <FechaInicio></FechaInicio>
-            <FechaFin>M</FechaFin>
+            <Nombre>Eso</Nombre>
+            <Institucion>Maristas La Inmaculada</Institucion>
+            <AñopInicio>2017</AñopInicio>
+            <AñoFin>2021</AñoFin>
         </Estudio>
+        
+        <Estudio>
+            <Nombre>Bachiller </Nombre>
+            <Institucion>IES Padre Manjon</Institucion>
+            <AñopInicio>2021</AñopInicio>
+            <AñoFin>2023</AñoFin>
+        </Estudio>
+
     </FormacionAcademica>
+
     <Idioma>
-        <Nombre></Nombre>
-        <ExpresionOral></ExpresionOral>
-        <ComprensionOral></ComprensionOral>
-        <ExpresionEscrita></ExpresionEscrita>
-        <ComprensionEscrita></ComprensionEscrita>
-        <TituloAcreditativo></TituloAcreditativo>
-        <NivelTitulo></NivelTitulo>
+        <Nombre>Ingles </Nombre>
+        <ExpresionOral>Medio</ExpresionOral>
+        <ComprensionOral>Medio</ComprensionOral>
+        <ExpresionEscrita>Medio</ExpresionEscrita>
+        <ComprensionEscrita>Medio</ComprensionEscrita>
+        <TituloAcreditativo>Ninguno</TituloAcreditativo>
+        <NivelTitulo>Ninguno</NivelTitulo>
     </Idioma>
+
+    <ExperienciaLaboral>
+        <Experiencia>
+            <EmpresaInstitucion>Ninguna</EmpresaInstitucion>
+            <PuestoDesempenado></PuestoDesempenado>
+            <FechaComienzo></FechaComienzo>
+            <FechaFin></FechaFin>
+        </Experiencia>
+    </ExperienciaLaboral>
+
+    <DatosAdicionales>
+        <Aficiones>Viajar</Aficiones>
+        <DisponibilidadParaViajar>Sí</DisponibilidadParaViajar>
+        <VehiculoPropio>No</VehiculoPropio>
+        <LicenciasPermisosConducir>Tipo de Licencia/Permiso</LicenciasPermisosConducir>
+    </DatosAdicionales>
 
     
 

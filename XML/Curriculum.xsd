@@ -1,3 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- Definición de tipos complejos -->
+
+<!-- DatosPersonales -->
+<xs:element name="DatosPersonales">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Nombre" type="xs:string" />
+            <xs:element name="Apellidos" type="xs:string" />
+            <xs:element name="FechaNacimiento" type="xs:date" />
+            <xs:element name="LugarNacimiento" type="xs:string" />
+            <xs:element name="Nacionalidades">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Nacionalidad" type="xs:string" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DNI">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\d{8}[A-Z]" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="ArchivoFoto" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- DatosContacto -->
+<xs:element name="DatosContacto">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="TipoVia" type="xs:string" />
+            <xs:element name="NombreVia" type="xs:string" />
+            <xs:element name="Numero" type="xs:positiveInteger" />
+            <xs:element name="Portal" type="xs:string" />
+            <xs:element name="Escalera" type="xs:string" />
+            <xs:element name="Piso" type="xs:positiveInteger" />
+            <xs:element name="Puerta" type="xs:string" />
+            <xs:element name="CodigoPostal" type="xs:string" />
+            <xs:element name="Pais" type="xs:string" />
+            <xs:element name="CorreoElectronico">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TelefonoMovil" type="xs:string" />
+            <xs:element name="TelefonoFijo" type="xs:string" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- DatosContactoAdicionales -->
+<xs:element name="DatosContactoAdicionales">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="PaginaWeb" type="xs:anyURI" /> <!-- Representa una URL -->
+            <xs:element name="RedesSociales" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- FormacionAcademica -->
+<xs:element name="FormacionAcademica">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Estudio" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Nombre" type="xs:string" />
+                        <xs:element name="Institucion" type="xs:string" />
+                        <xs:element name="AñopInicio" type="xs:gYear" /> <!--  representa un año específico en el calendario-->
+                        <xs:element name="AñoFin" type="xs:gYear" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Idioma -->
+<xs:element name="Idioma">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Nombre" type="xs:string" />
+            <xs:element name="ExpresionOral" type="NivelIdioma" />
+            <xs:element name="ComprensionOral" type="NivelIdioma" />
+            <xs:element name="ExpresionEscrita" type="NivelIdioma" />
+            <xs:element name="ComprensionEscrita" type="NivelIdioma" />
+            <xs:element name="TituloAcreditativo" type="xs:string" />
+            <xs:element name="NivelTitulo" type="NivelMCER" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- ExperienciaLaboral -->
+<xs:element name="ExperienciaLaboral">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Experiencia">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="EmpresaInstitucion" type="xs:string" />
+                        <xs:element name="PuestoDesempenado" type="xs:string" />
+                        <xs:element name="FechaComienzo" type="xs:date" minOccurs="0" />
+                        <xs:element name="FechaFin" type="xs:date" minOccurs="0" />
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- DatosAdicionales -->
+<xs:element name="DatosAdicionales">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="Aficiones" type="xs:string" />
+            <xs:element name="DisponibilidadParaViajar" type="xs:string" />
+            <xs:element name="VehiculoPropio" type="xs:string" />
+            <xs:element name="LicenciasPermisosConducir" type="LicenciasConducir" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<!-- Definición de tipos simples -->
+
+<!-- Nivel de idioma -->
+<xs:simpleType name="NivelIdioma">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="bajo" />
+        <xs:enumeration value="medio" />
+        <xs:enumeration value="alto" />
+    </xs:restriction>
+</xs:simpleType>
+
+<!-- Nivel MCER -->
+<xs:simpleType name="NivelMCER">
+<xs:restriction base="xs:string">
+<xs:enumeration value="A1" />
+<xs:enumeration value="A2" />
+<xs:enumeration value="B1" />
+<xs:enumeration value="B2" />
+<xs:enumeration value="C1" />
+<xs:enumeration value="C2" />
+</>
+
+<!-- Licencias de conducir -->
+<xs:simpleType name="LicenciasConducir">
+    <xs:list itemType="TipoLicencia" />
+</xs:simpleType>
+
+<!-- Tipo de licencia -->
+<xs:simpleType name="TipoLicencia">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="AM" />
+        <xs:enumeration value="A1" />
+        <xs:enumeration value="A2" />
+        <xs:enumeration value="A" />
+        <xs:enumeration value="B" />
+        <xs:enumeration value="B+E" />
+        <xs:enumeration value="C1" />
+        <xs:enumeration value="C" />
+        <xs:enumeration value="D1" />
+        <xs:enumeration value="D1+E" />
+        <xs:enumeration value="D" />
+        <xs:enumeration value="BTP" />
+    </xs:restriction>
+</xs:simpleType>
+
+
 </xs:schema>
