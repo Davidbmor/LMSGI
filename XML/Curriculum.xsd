@@ -1,179 +1,177 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 
 
-<!-- Definición de tipos complejos -->
+    <xsd:complexType name="Curriculum">
+        <xsd:sequence>
+            <xsd:element name="DatosPersonales" type="DatosPersonalesType" />
+            <xsd:element name="DatosContacto" type="DatosContactoType" />
+            <xsd:element name="DatosContactoAdicionales" type="DatosContactoAdicionalesType" minOccurs="0" />
+            <xsd:element name="FormacionAcademica" type="FormacionAcademicaType" />
+            <xsd:element name="Idiomas" type="IdiomasType" minOccurs="0" />
+            <xsd:element name="ExperienciaLaboral" type="ExperienciaLaboralType" minOccurs="0" />
+            <xsd:element name="DatosAdicionales" type="DatosAdicionalesType" minOccurs="0" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:string" use="required" />
+    </xsd:complexType>
 
-<!-- DatosPersonales -->
-<xs:element name="DatosPersonales">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Nombre" type="xs:string" />
-            <xs:element name="Apellidos" type="xs:string" />
-            <xs:element name="FechaNacimiento" type="xs:date" />
-            <xs:element name="LugarNacimiento" type="xs:string" />
-            <xs:element name="Nacionalidades">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Nacionalidad" type="xs:string" />
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="DNI">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="\d{8}[A-Z]" />
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="ArchivoFoto" type="xs:string" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:complexType name="DatosPersonalesType">
+        <xsd:sequence>
+            <xsd:element name="Nombre" type="xsd:string" minOccurs="1" />
+            <xsd:element name="Apellidos" type="xsd:string" minOccurs="1" />
+            <xsd:element name="FechaNacimiento" type="FechaNacimientoType" minOccurs="1" />
+            <xsd:element name="LugarNacimiento" type="xsd:string" minOccurs="1" />
+            <xsd:element name="Nacionalidades" type="NacionalidadesType" />
+            <xsd:element name="DNI" type="xsd:string" minOccurs="1" />
+            <xsd:element name="ArchivoFoto" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- DatosContacto -->
-<xs:element name="DatosContacto">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="TipoVia" type="xs:string" />
-            <xs:element name="NombreVia" type="xs:string" />
-            <xs:element name="Numero" type="xs:positiveInteger" />
-            <xs:element name="Portal" type="xs:string" />
-            <xs:element name="Escalera" type="xs:string" />
-            <xs:element name="Piso" type="xs:positiveInteger" />
-            <xs:element name="Puerta" type="xs:string" />
-            <xs:element name="CodigoPostal" type="xs:string" />
-            <xs:element name="Pais" type="xs:string" />
-            <xs:element name="CorreoElectronico">
-                <xs:simpleType>
-                    <xs:restriction base="xs:string">
-                        <xs:pattern value="\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b" />
-                    </xs:restriction>
-                </xs:simpleType>
-            </xs:element>
-            <xs:element name="TelefonoMovil" type="xs:string" />
-            <xs:element name="TelefonoFijo" type="xs:string" minOccurs="0" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:simpleType name="FechaNacimientoType">
+    <xsd:restriction base="xsd:date">
+        <xsd:minInclusive value="1900-01-01" />
+        <xsd:maxInclusive value="2024-04-04" />
+    </xsd:restriction>
+</xsd:simpleType>
 
-<!-- DatosContactoAdicionales -->
-<xs:element name="DatosContactoAdicionales">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="PaginaWeb" type="xs:anyURI" /> <!-- Representa una URL -->
-            <xs:element name="RedesSociales" type="xs:string" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:complexType name="NacionalidadesType">
+        <xsd:sequence>
+            <xsd:element name="Nacionalidad" type="xsd:string" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- FormacionAcademica -->
-<xs:element name="FormacionAcademica">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Estudio" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Nombre" type="xs:string" />
-                        <xs:element name="Institucion" type="xs:string" />
-                        <xs:element name="AñopInicio" type="xs:gYear" /> <!--  representa un año específico en el calendario-->
-                        <xs:element name="AñoFin" type="xs:gYear" />
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:complexType name="DatosContactoType">
+        <xsd:sequence>
+            <xsd:element name="TipoVia" type="xsd:string" minOccurs="1" />
+            <xsd:element name="NombreVia" type="xsd:string" minOccurs="1" />
+            <xsd:element name="Numero" type="xsd:positiveInteger" minOccurs="1" />
+            <xsd:element name="Portal" type="xsd:string" minOccurs="0" />
+            <xsd:element name="Escalera" type="xsd:string" minOccurs="0" />
+            <xsd:element name="Piso" type="xsd:positiveInteger" minOccurs="0" />
+            <xsd:element name="Puerta" type="xsd:string" minOccurs="0" />
+            <xsd:element name="CodigoPostal" type="CodigoPostalType" minOccurs="1" />
+            <xsd:element name="Pais" type="xsd:string" minOccurs="1" />
+            <xsd:element name="CorreoElectronico" type="CorreoElectronicoType" minOccurs="1" />
+            <xsd:element name="TelefonoMovil" type="TelefonoMovilType" minOccurs="0" />
+            <xsd:element name="TelefonoFijo" type="TelefonoFijoType" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- Idioma -->
-<xs:element name="Idioma">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Nombre" type="xs:string" />
-            <xs:element name="ExpresionOral" type="NivelIdioma" />
-            <xs:element name="ComprensionOral" type="NivelIdioma" />
-            <xs:element name="ExpresionEscrita" type="NivelIdioma" />
-            <xs:element name="ComprensionEscrita" type="NivelIdioma" />
-            <xs:element name="TituloAcreditativo" type="xs:string" />
-            <xs:element name="NivelTitulo" type="NivelMCER" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:simpleType name="CodigoPostalType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{4,5}" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-<!-- ExperienciaLaboral -->
-<xs:element name="ExperienciaLaboral">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Experiencia">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="EmpresaInstitucion" type="xs:string" />
-                        <xs:element name="PuestoDesempenado" type="xs:string" />
-                        <xs:element name="FechaComienzo" type="xs:date" minOccurs="0" />
-                        <xs:element name="FechaFin" type="xs:date" minOccurs="0" />
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:simpleType name="CorreoElectronicoType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-<!-- DatosAdicionales -->
-<xs:element name="DatosAdicionales">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element name="Aficiones" type="xs:string" />
-            <xs:element name="DisponibilidadParaViajar" type="xs:string" />
-            <xs:element name="VehiculoPropio" type="xs:string" />
-            <xs:element name="LicenciasPermisosConducir" type="LicenciasConducir" />
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+    <xsd:simpleType name="TelefonoMovilType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="^[679]{1}[0-9]{8}$" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-<!-- Definición de tipos simples -->
+    <xsd:simpleType name="TelefonoFijoType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="^[0-9]{9}$" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-<!-- Nivel de idioma -->
-<xs:simpleType name="NivelIdioma">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="bajo" />
-        <xs:enumeration value="medio" />
-        <xs:enumeration value="alto" />
-    </xs:restriction>
-</xs:simpleType>
+    <xsd:complexType name="FormacionAcademicaType">
+        <xsd:sequence>
+            <xsd:element name="Estudio" type="EstudioType" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- Nivel MCER -->
-<xs:simpleType name="NivelMCER">
-<xs:restriction base="xs:string">
-<xs:enumeration value="A1" />
-<xs:enumeration value="A2" />
-<xs:enumeration value="B1" />
-<xs:enumeration value="B2" />
-<xs:enumeration value="C1" />
-<xs:enumeration value="C2" />
-</>
+    <xsd:complexType name="EstudioType">
+        <xsd:sequence>
+            <xsd:element name="Nombre" type="xsd:string" minOccurs="1" />
+            <xsd:element name="Institucion" type="xsd:string" minOccurs="1" />
+            <xsd:element name="AñopInicio" type="xsd:gYear" minOccurs="1" />
+            <xsd:element name="AñoFin" type="xsd:gYear" minOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- Licencias de conducir -->
-<xs:simpleType name="LicenciasConducir">
-    <xs:list itemType="TipoLicencia" />
-</xs:simpleType>
+    <xsd:complexType name="IdiomasType">
+        <xsd:sequence>
+            <xsd:element name="Idioma" type="IdiomaType" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
 
-<!-- Tipo de licencia -->
-<xs:simpleType name="TipoLicencia">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="AM" />
-        <xs:enumeration value="A1" />
-        <xs:enumeration value="A2" />
-        <xs:enumeration value="A" />
-        <xs:enumeration value="B" />
-        <xs:enumeration value="B+E" />
-        <xs:enumeration value="C1" />
-        <xs:enumeration value="C" />
-        <xs:enumeration value="D1" />
-        <xs:enumeration value="D1+E" />
-        <xs:enumeration value="D" />
-        <xs:enumeration value="BTP" />
-    </xs:restriction>
-</xs:simpleType>
+    <xsd:complexType name="IdiomaType">
+        <xsd:sequence>
+            <xsd:element name="Nombre" type="xsd:string" minOccurs="1" />
+            <xsd:element name="ExpresionOral" type="NivelType" minOccurs="1" />
+            <xsd:element name="ComprensionOral" type="NivelType" minOccurs="1" />
+            <xsd:element name="ExpresionEscrita" type="NivelType" minOccurs="1" />
+            <xsd:element name="ComprensionEscrita" type="NivelType" minOccurs="1" />
+            <xsd:element name="TituloAcreditativo" type="xsd:string" minOccurs="0" />
+            <xsd:element name="NivelTitulo" type="MarcoComunType" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
 
+    <xsd:simpleType name="NivelType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="bajo" />
+            <xsd:enumeration value="medio" />
+            <xsd:enumeration value="alto" />
+        </xsd:restriction>
+    </xsd:simpleType>
 
-</xs:schema>
+    <xsd:simpleType name="MarcoComunType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="A1" />
+            <xsd:enumeration value="A2" />
+            <xsd:enumeration value="B1" />
+            <xsd:enumeration value="B2" />
+            <xsd:enumeration value="C1" />
+            <xsd:enumeration value="C2" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="ExperienciaLaboralType">
+        <xsd:sequence>
+            <xsd:element name="Experiencia" type="ExperienciaType" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ExperienciaType">
+        <xsd:sequence>
+            <xsd:element name="EmpresaInstitucion" type="xsd:string" minOccurs="1" />
+            <xsd:element name="PuestoDesempenado" type="xsd:string" minOccurs="1" />
+            <xsd:element name="FechaComienzo" type="xsd:date" minOccurs="1" />
+            <xsd:element name="FechaFin" type="xsd:date" minOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="DatosAdicionalesType">
+        <xsd:sequence>
+            <xsd:element name="Aficiones" type="xsd:string" minOccurs="0" />
+            <xsd:element name="DisponibilidadParaViajar" type="xsd:boolean" minOccurs="0" />
+            <xsd:element name="VehiculoPropio" type="xsd:boolean" minOccurs="0" />
+            <xsd:element name="LicenciasPermisosConducir" type="LicenciasType" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="LicenciasType">
+        <xsd:list itemType="xsd:string">
+            <xsd:enumeration value="AM" />
+            <xsd:enumeration value="A1" />
+            <xsd:enumeration value="A2" />
+            <xsd:enumeration value="A" />
+            <xsd:enumeration value="B" />
+            <xsd:enumeration value="B+E" />
+            <xsd:enumeration value="C1" />
+            <xsd:enumeration value="C" />
+            <xsd:enumeration value="D1" />
+            <xsd:enumeration value="D1+E" />
+            <xsd:enumeration value="D" />
+            <xsd:enumeration value="BTP" />
+        </xsd:list>
+    </xsd:simpleType>
+
+</xsd:schema>
